@@ -484,6 +484,10 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .advantage-item:hover {
@@ -491,28 +495,35 @@ body {
 }
 
 .advantage-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 2;
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    transition: transform 0.3s ease;
 }
 
-.advantage-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.advantage-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.advantage-item:hover .advantage-icon {
+    transform: scale(1.1);
 }
 
 .advantage-content {
-    position: relative;
-    z-index: 2;
+    text-align: center;
+    width: 100%;
 }
 
 .advantage-content h3 {
     color: var(--primary-color);
-    font-size: 1.8rem;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .advantage-content p {
@@ -956,23 +967,26 @@ blockquote::before {
 
 .contact-list li {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
 .contact-icon {
+    display: inline-block;
+    width: 1.5em;
+    font-size: 1.2rem;
     margin-right: 1rem;
-    font-style: normal;
+    color: white;
 }
 
-.contact-list a {
+.contact-list a,
+.contact-list span {
     color: white;
     text-decoration: none;
-    transition: opacity 0.3s ease;
 }
 
 .contact-list a:hover {
-    opacity: 0.8;
+    color: var(--primary-color);
 }
 
 /* Footer Navigation */
@@ -1021,6 +1035,17 @@ blockquote::before {
     width: 20px;
     height: 20px;
     filter: brightness(0) invert(1);
+}
+
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
 }
 
 /* Footer Bottom */
