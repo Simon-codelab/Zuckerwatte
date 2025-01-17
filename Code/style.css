@@ -1,37 +1,41 @@
-/* Globale Variablen */
+/* ==========================================================================
+   Globale Variablen - Farbschema und wichtige Grundeinstellungen
+   ========================================================================== */
 :root {
-    /* Hauptfarben */
-    --primary-color: #fbadba;    /* Rosa/Pink Hauptfarbe */
-    --secondary-color: #73d3df;  /* Helles Türkis */
-    --tertiary-color: #4ba6c1;   /* Mittleres Blau */
+    /* Hauptfarben für das gesamte Design */
+    --primary-color: #fbadba;    /* Rosa/Pink - Hauptmarkenfarbe */
+    --secondary-color: #73d3df;  /* Helles Türkis - Akzentfarbe */
+    --tertiary-color: #4ba6c1;   /* Mittleres Blau - Zusatzfarbe */
     
-    /* Hintergrundfarben */
-    --background-color: #f6f5ea; /* Heller Cremeton */
-    --background-alt: #ffffff;   /* Weiß für Kontrast */
-    --background-dark: #e9e8dd;  /* Dunklerer Cremeton */
+    /* Hintergrundfarben für verschiedene Sektionen */
+    --background-color: #f6f5ea; /* Heller Cremeton - Haupthintergrund */
+    --background-alt: #ffffff;   /* Weiß - Alternativer Hintergrund */
+    --background-dark: #e9e8dd;  /* Dunklerer Cremeton - Kontrast */
     
-    /* Textfarben */
-    --text-color: #1c2f3f;      /* Haupttextfarbe */
-    --text-light: #4a5b6b;      /* Hellere Textfarbe */
-    --text-dark: #0f1a24;       /* Dunklere Textfarbe */
+    /* Textfarben für optimale Lesbarkeit */
+    --text-color: #1c2f3f;      /* Haupttextfarbe - Dunkelblau */
+    --text-light: #4a5b6b;      /* Hellere Textfarbe für weniger Wichtiges */
+    --text-dark: #0f1a24;       /* Dunklere Textfarbe für Überschriften */
     
-    /* Akzentfarben */
-    --accent-warm: #f8969f;     /* Helleres Rosa */
-    --accent-cool: #5ec7d5;     /* Helleres Türkis */
-    --accent-deep: #3d8ba3;     /* Dunkleres Blau */
+    /* Akzentfarben für Hover-Effekte und Highlights */
+    --accent-warm: #f8969f;     /* Helleres Rosa für Hover */
+    --accent-cool: #5ec7d5;     /* Helleres Türkis für Hover */
+    --accent-deep: #3d8ba3;     /* Dunkleres Blau für Kontraste */
     
-    /* Zusätzliche Farben */
+    /* Statusfarben für Feedback */
     --success-color: #6bc2a1;   /* Grün für Erfolg */
     --warning-color: #ffd166;   /* Gelb für Warnungen */
     --error-color: #ef476f;     /* Rot für Fehler */
     
-    /* Hover und Interaktionsfarben */
+    /* Hover-Farben für interaktive Elemente */
     --hover-primary: #ff99a8;   /* Helleres Rosa für Hover */
     --hover-secondary: #8ddbe5;  /* Helleres Türkis für Hover */
     --hover-tertiary: #5bb8d3;  /* Helleres Blau für Hover */
 }
 
-/* Reset und Basis-Styles */
+/* ==========================================================================
+   Reset und Basis-Styles
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +48,10 @@ body {
     color: var(--text-color);
 }
 
-/* Header und Navigation */
+/* ==========================================================================
+   Header und Navigation
+   Enthält das Logo und die Hauptnavigation mit Hover-Effekten
+   ========================================================================== */
 .main-header {
     position: fixed;
     top: 0;
@@ -111,7 +118,10 @@ body {
     width: 100%;
 }
 
-/* Hero Section */
+/* ==========================================================================
+   Hero Section
+   Großes Hauptbild mit überlagerndem Text und Call-to-Action Button
+   ========================================================================== */
 .hero-section {
     position: relative;
     min-height: 90vh;
@@ -173,7 +183,10 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Button Styles */
+/* ==========================================================================
+   Button Styles
+   Stil für Call-to-Action Buttons
+   ========================================================================== */
 .cta-button {
     display: inline-block;
     padding: 1rem 2.5rem;
@@ -194,7 +207,10 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Custom Faces Section */
+/* ==========================================================================
+   Custom Faces Section
+   Sektion für individuelle Gesichter mit Bildern und Beschreibungen
+   ========================================================================== */
 .custom-faces-section {
     padding: 5rem 2rem;
     background-color: var(--background-color);
@@ -277,7 +293,10 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Benefits Section */
+/* ==========================================================================
+   Benefits Section
+   Zeigt die Hauptvorteile unseres Services in drei Karten
+   ========================================================================== */
 .benefits-section {
     padding: 5rem 2rem;
     background: white;
@@ -349,7 +368,10 @@ body {
     font-size: 1.1rem;
 }
 
-/* Services Section */
+/* ==========================================================================
+   Services Section
+   Karussell mit drei Hauptdienstleistungen und Navigation
+   ========================================================================== */
 .services-section {
     padding: 5rem 2rem;
     background-color: var(--background-color);
@@ -450,7 +472,10 @@ body {
     }
 }
 
-/* Advantages Section */
+/* ==========================================================================
+   Advantages Section
+   Zeigt die Vorteile unseres Services in drei Karten
+   ========================================================================== */
 .advantages-section {
     padding: 5rem 2rem;
     background: linear-gradient(135deg, #fff5f8 0%, #fff 100%);
@@ -531,7 +556,10 @@ body {
     line-height: 1.6;
 }
 
-/* Animations */
+/* ==========================================================================
+   Animations
+   Effekte für die Advantages Section
+   ========================================================================== */
 .advantage-animation {
     position: absolute;
     top: 0;
@@ -593,7 +621,10 @@ body {
     }
 }
 
-/* CTA Section */
+/* ==========================================================================
+   CTA Section
+   Call-to-Action Sektion mit Button und Hintergrundbild
+   ========================================================================== */
 .cta-section {
     padding: 5rem 2rem;
     background: linear-gradient(45deg, var(--primary-color) 0%, var(--accent-warm) 100%);
@@ -677,7 +708,10 @@ body {
     font-size: 1.3rem;
 }
 
-/* Decorative Elements */
+/* ==========================================================================
+   Decorative Elements
+   Dekorative Elemente für die CTA Section
+   ========================================================================== */
 .cotton-candy-cloud {
     position: absolute;
     width: 100%;
@@ -698,7 +732,10 @@ body {
     }
 }
 
-/* Responsive Design */
+/* ==========================================================================
+   Responsive Design
+   Anpassungen für verschiedene Bildschirmgrößen
+   ========================================================================== */
 @media (max-width: 768px) {
     .cta-section {
         padding: 4rem 1.5rem;
@@ -718,7 +755,6 @@ body {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .hero-section {
         grid-template-columns: 1fr;
@@ -742,7 +778,10 @@ body {
     }
 }
 
-/* Testimonials Section */
+/* ==========================================================================
+   Testimonials Section
+   Zeigt Kundenbewertungen in einem Karussell
+   ========================================================================== */
 .testimonials-section {
     padding: 5rem 2rem;
     background-color: white;
@@ -838,7 +877,10 @@ blockquote::before {
     font-size: 0.9rem;
 }
 
-/* Testimonial Controls */
+/* ==========================================================================
+   Testimonial Controls
+   Steuerelemente für das Testimonial Karussell
+   ========================================================================== */
 .testimonial-controls {
     display: flex;
     justify-content: center;
@@ -908,7 +950,10 @@ blockquote::before {
     }
 }
 
-/* Footer */
+/* ==========================================================================
+   Footer
+   Enthält Kontaktinformationen, Navigation und Social Media Links
+   ========================================================================== */
 .main-footer {
     background-color: var(--primary-color);
     color: white;
@@ -959,7 +1004,10 @@ blockquote::before {
     opacity: 0.9;
 }
 
-/* Contact List */
+/* ==========================================================================
+   Contact List
+   Liste mit Kontaktinformationen
+   ========================================================================== */
 .contact-list {
     list-style: none;
     padding: 0;
@@ -989,7 +1037,10 @@ blockquote::before {
     color: var(--primary-color);
 }
 
-/* Footer Navigation */
+/* ==========================================================================
+   Footer Navigation
+   Fußzeilen-Navigation
+   ========================================================================== */
 .footer-nav {
     list-style: none;
     padding: 0;
@@ -1009,7 +1060,10 @@ blockquote::before {
     opacity: 0.8;
 }
 
-/* Social Links */
+/* ==========================================================================
+   Social Links
+   Social Media Links
+   ========================================================================== */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -1048,7 +1102,10 @@ blockquote::before {
     color: var(--primary-color);
 }
 
-/* Footer Bottom */
+/* ==========================================================================
+   Footer Bottom
+   Fußzeilen-Bottom
+   ========================================================================== */
 .footer-bottom {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
