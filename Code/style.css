@@ -1,10 +1,34 @@
 /* Globale Variablen */
 :root {
-    --primary-color: #FF69B4;    /* Rosa für Hauptelemente */
-    --secondary-color: #87CEEB;  /* Helles Blau für Akzente */
-    --text-color: #333333;       /* Dunkelgrau für Text */
-    --light-color: #FFF5F8;      /* Helles Rosa für Hintergründe */
-    --accent-color: #FFB6C1;     /* Helles Pink für Hover-Effekte */
+    /* Hauptfarben */
+    --primary-color: #fbadba;    /* Rosa/Pink Hauptfarbe */
+    --secondary-color: #73d3df;  /* Helles Türkis */
+    --tertiary-color: #4ba6c1;   /* Mittleres Blau */
+    
+    /* Hintergrundfarben */
+    --background-color: #f6f5ea; /* Heller Cremeton */
+    --background-alt: #ffffff;   /* Weiß für Kontrast */
+    --background-dark: #e9e8dd;  /* Dunklerer Cremeton */
+    
+    /* Textfarben */
+    --text-color: #1c2f3f;      /* Haupttextfarbe */
+    --text-light: #4a5b6b;      /* Hellere Textfarbe */
+    --text-dark: #0f1a24;       /* Dunklere Textfarbe */
+    
+    /* Akzentfarben */
+    --accent-warm: #f8969f;     /* Helleres Rosa */
+    --accent-cool: #5ec7d5;     /* Helleres Türkis */
+    --accent-deep: #3d8ba3;     /* Dunkleres Blau */
+    
+    /* Zusätzliche Farben */
+    --success-color: #6bc2a1;   /* Grün für Erfolg */
+    --warning-color: #ffd166;   /* Gelb für Warnungen */
+    --error-color: #ef476f;     /* Rot für Fehler */
+    
+    /* Hover und Interaktionsfarben */
+    --hover-primary: #ff99a8;   /* Helleres Rosa für Hover */
+    --hover-secondary: #8ddbe5;  /* Helleres Türkis für Hover */
+    --hover-tertiary: #5bb8d3;  /* Helleres Blau für Hover */
 }
 
 /* Reset und Basis-Styles */
@@ -173,7 +197,7 @@ body {
 /* Custom Faces Section */
 .custom-faces-section {
     padding: 5rem 2rem;
-    background-color: var(--light-color);
+    background-color: var(--background-color);
 }
 
 .custom-faces-container {
@@ -281,7 +305,7 @@ body {
 .benefit-card {
     text-align: center;
     padding: 2rem;
-    background: var(--light-color);
+    background: var(--background-color);
     border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -295,18 +319,22 @@ body {
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem;
-    background: white;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-icon img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+.benefit-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon i {
+    transform: scale(1.1);
 }
 
 .benefit-card h3 {
@@ -324,7 +352,7 @@ body {
 /* Services Section */
 .services-section {
     padding: 5rem 2rem;
-    background-color: var(--light-color);
+    background-color: var(--background-color);
 }
 
 .services-container {
@@ -557,7 +585,7 @@ body {
 /* CTA Section */
 .cta-section {
     padding: 5rem 2rem;
-    background: linear-gradient(45deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(45deg, var(--primary-color) 0%, var(--accent-warm) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -619,7 +647,7 @@ body {
 .primary-cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    background-color: var(--light-color);
+    background-color: var(--background-color);
 }
 
 .secondary-cta-button {
@@ -734,7 +762,7 @@ body {
     grid-template-columns: 300px 1fr;
     gap: 2rem;
     padding: 2rem;
-    background: var(--light-color);
+    background: var(--background-color);
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -833,7 +861,7 @@ blockquote::before {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--accent-color);
+    background-color: var(--accent-warm);
     opacity: 0.5;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -903,7 +931,7 @@ blockquote::before {
     bottom: -0.5rem;
     width: 50px;
     height: 2px;
-    background-color: var(--accent-color);
+    background-color: var(--accent-warm);
 }
 
 .footer-logo {
