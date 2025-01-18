@@ -7,7 +7,7 @@
     --secondary-color: #73d3df;  /* Helles Türkis - Akzentfarbe */
     --tertiary-color: #4ba6c1;   /* Mittleres Blau - Zusatzfarbe */
     
-    /* Hintergrundfarben für verschiedene Sektionen */
+    /* Hintergrundfarben für verschiedene Bereiche */
     --background-color: #f6f5ea; /* Heller Cremeton - Haupthintergrund */
     --background-alt: #ffffff;   /* Weiß - Alternativer Hintergrund */
     --background-dark: #e9e8dd;  /* Dunklerer Cremeton - Kontrast */
@@ -461,17 +461,23 @@ body {
 .benefit-icon i {
     font-size: 2.5rem;
     color: var(--primary-color);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .benefit-card:hover .benefit-icon i {
     transform: scale(1.1);
+    color: var(--hero-background);
 }
 
 .benefit-card h3 {
     color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.benefit-card:hover h3 {
+    color: var(--hero-background);
 }
 
 .benefit-card p {
@@ -619,9 +625,9 @@ body {
 
 .advantages-section h2 {
     text-align: center;
-    color: var(--primary-color);
-    font-size: 2.5rem;
     margin-bottom: 3rem;
+    color: var(--hero-background);
+    font-size: 2.5rem;
 }
 
 .advantages-grid {
@@ -652,13 +658,13 @@ body {
 .advantage-icon {
     width: 80px;
     height: 80px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
+    margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem auto;
-    transition: transform 0.3s ease;
+    background-color: var(--hero-background);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .advantage-icon i {
@@ -676,7 +682,7 @@ body {
 }
 
 .advantage-content h3 {
-    color: var(--primary-color);
+    color: var(--hero-background);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
