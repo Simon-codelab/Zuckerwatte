@@ -61,4 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
             dot.classList.toggle('active', index === currentSlide);
         });
     }
+
+    // Bubbly Button Animation
+    const animateButton = function(e) {
+        e.preventDefault();
+        e.target.classList.remove('animate');
+        e.target.classList.add('animate');
+        setTimeout(function(){
+            e.target.classList.remove('animate');
+        }, 700);
+    };
+
+    document.querySelector('.cta-button').addEventListener('click', animateButton, false);
 });
