@@ -268,8 +268,6 @@ body {
 
 .cta-button:active {
     transform: scale(0.9);
-    background-color: var(--secondary-color);
-    box-shadow: 0 2px 25px rgba(115, 211, 223, 0.2);
 }
 
 .cta-button.animate:before {
