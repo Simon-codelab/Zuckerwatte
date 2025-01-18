@@ -84,3 +84,64 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', animateButton, false);
     });
 });
+
+// Wassertropfen-Animation für die Navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li a');
+    let currentLink = null;
+    
+    // Erstelle das Bubble-Element
+    const bubble = document.createElement('span');
+    bubble.className = 'nav-bubble';
+    navLinks.appendChild(bubble);
+
+    // Funktion zum Aktualisieren der Bubble-Position
+    function updateBubblePosition(link) {
+        if (currentLink === link) return;
+        currentLink = link;
+        
+        const rect = link.getBoundingClientRect();
+        const navRect = navLinks.getBoundingClientRect();
+        
+        // Setze zuerst Position und Größe
+        bubble.style.width = `${rect.width}px`;
+        bubble.style.height = `${rect.height}px`;
+        bubble.style.left = `${rect.left - navRect.left}px`;
+        bubble.style.top = `${rect.top - navRect.top}px`;
+        
+        // Starte die Animation
+        requestAnimationFrame(() => {
+            if (!bubble.style.opacity || bubble.style.opacity === '0') {
+                bubble.style.animation = 'bubbleAnimation 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards';
+            } else {
+                bubble.style.opacity = '1';
+            }
+        });
+    }
+
+    // Event-Listener für Hover
+    links.forEach(link => {
+        const li = link.parentElement;
+        
+        li.addEventListener('mouseenter', () => {
+            updateBubblePosition(link);
+        });
+    });
+
+    // Verstecke Bubble nur wenn die Maus komplett die Navigation verlässt
+    navLinks.addEventListener('mouseleave', (e) => {
+        const rect = navLinks.getBoundingClientRect();
+        const isReallyLeaving = 
+            e.clientY < rect.top || 
+            e.clientY > rect.bottom || 
+            e.clientX < rect.left || 
+            e.clientX > rect.right;
+
+        if (isReallyLeaving) {
+            currentLink = null;
+            bubble.style.animation = 'none';
+            bubble.style.opacity = '0';
+        }
+    });
+});
