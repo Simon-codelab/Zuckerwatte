@@ -643,7 +643,7 @@ body {
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -652,7 +652,7 @@ body {
 }
 
 .advantage-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .advantage-icon {
@@ -665,6 +665,7 @@ body {
     background-color: var(--hero-background);
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.5s ease;
 }
 
 .advantage-icon i {
@@ -673,7 +674,8 @@ body {
 }
 
 .advantage-item:hover .advantage-icon {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background-color: var(--primary-color);
 }
 
 .advantage-content {
@@ -685,6 +687,11 @@ body {
     color: var(--hero-background);
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    transition: color 0.5s ease;
+}
+
+.advantage-item:hover .advantage-content h3 {
+    color: var(--primary-color);
 }
 
 .advantage-content p {
