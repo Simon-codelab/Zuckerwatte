@@ -514,6 +514,18 @@ body {
     transition: transform 0.3s ease;
 }
 
+.service-card:nth-child(even) {
+    grid-template-columns: 2fr 1fr;
+}
+
+.service-card:nth-child(even) .service-image {
+    order: 2;
+}
+
+.service-card:nth-child(even) .service-content {
+    order: 1;
+}
+
 .service-card:hover {
     transform: translateY(-5px);
 }
@@ -572,12 +584,18 @@ body {
 }
 
 @media (max-width: 900px) {
-    .service-card {
+    .service-card,
+    .service-card:nth-child(even) {
         grid-template-columns: 1fr;
     }
 
     .service-image {
         min-height: 200px;
+        order: 1 !important;
+    }
+
+    .service-content {
+        order: 2 !important;
     }
 }
 
