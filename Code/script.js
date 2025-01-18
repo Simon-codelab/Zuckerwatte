@@ -3,64 +3,71 @@
 //  Implementiert das Karussell für die Testimonials-Karten
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', function() {
-    // Selektiert die Slider- und Karten-Elemente
+    // Testimonials Slider
     const slider = document.querySelector('.testimonials-slider');
     const slides = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.dot');
     const prevButton = document.querySelector('.prev-testimonial');
     const nextButton = document.querySelector('.next-testimonial');
 
-    // Initialisiert die aktuelle Slide-Position und die Gesamtzahl der Slides
     let currentSlide = 0;
     const slideCount = slides.length;
 
-    // Initialisiert den Slider
-    updateSlider();
+    // Initial setup
+    updateSlides();
+    updateDots();
 
-    // Event Listener für den "Zurück" Button
+    // Previous button click
     prevButton.addEventListener('click', () => {
-        // Berechnet die neue Slide-Position und aktualisiert den Slider
         currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-        updateSlider();
+        updateSlides();
+        updateDots();
     });
 
-    // Event Listener für den "Weiter" Button
+    // Next button click
     nextButton.addEventListener('click', () => {
-        // Berechnet die neue Slide-Position und aktualisiert den Slider
         currentSlide = (currentSlide + 1) % slideCount;
-        updateSlider();
+        updateSlides();
+        updateDots();
     });
 
-    // Event Listener für die Punkte (Dots)
+    // Dot navigation
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            // Setzt die aktuelle Slide-Position auf die gewählte Position
-            currentSlide = index;
-            updateSlider();
+            if (currentSlide !== index) {
+                currentSlide = index;
+                updateSlides();
+                updateDots();
+            }
         });
     });
 
-    // Auto-Advances den Slider alle 5 Sekunden
-    setInterval(() => {
-        // Berechnet die neue Slide-Position und aktualisiert den Slider
-        currentSlide = (currentSlide + 1) % slideCount;
-        updateSlider();
-    }, 5000);
-
-    /**
-     * Aktualisiert die Position des Sliders und der Punkte (Dots)
-     */
-    function updateSlider() {
-        // Aktualisiert die Position der Slides
+    function updateSlides() {
         slides.forEach((slide, index) => {
-            slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+            slide.classList.remove('active', 'prev', 'next');
+            
+            if (index === currentSlide) {
+                slide.classList.add('active');
+            } else if (index === (currentSlide - 1 + slideCount) % slideCount) {
+                slide.classList.add('prev');
+            } else {
+                slide.classList.add('next');
+            }
         });
+    }
 
-        // Aktualisiert die Punkte (Dots)
+    function updateDots() {
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentSlide);
         });
     }
+
+    // Auto-advance every 5 seconds
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateSlides();
+        updateDots();
+    }, 5000);
 
     // Bubbly Button Animation
     const animateButton = function(e) {
@@ -72,5 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 700);
     };
 
-    document.querySelector('.cta-button').addEventListener('click', animateButton, false);
+    const bubblyButtons = document.querySelectorAll(".cta-button");
+    bubblyButtons.forEach(btn => {
+        btn.addEventListener('click', animateButton, false);
+    });
 });
