@@ -82,12 +82,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const bubblyButtons = document.querySelectorAll(".cta-button");
     bubblyButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
-            if (this.getAttribute('href')) {
-                // Wenn der Button einen href hat, lass die normale Navigation zu
-                return;
-            }
-            // Sonst führe die Animation aus
+            e.preventDefault(); // Verhindere sofortige Navigation
+            
+            // Füge die Bubbles hinzu
             animateButton(e);
+            
+            // Navigiere nach einer kurzen Verzögerung (für die Animation)
+            const href = this.getAttribute('href');
+            if (href) {
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 600); // Warte bis die Animation fertig ist
+            }
         });
     });
 });
