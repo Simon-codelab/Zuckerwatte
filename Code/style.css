@@ -83,10 +83,10 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 0.5rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
     position: relative;
-    padding: 0.5rem;
 }
 
 .nav-links li {
@@ -99,49 +99,32 @@ body {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 20px;
-    transition: color 0.3s ease;
     position: relative;
-    z-index: 1;
     display: block;
+    z-index: 2;
 }
 
-.nav-links .nav-bubble {
+.nav-bubble {
     position: absolute;
     background-color: var(--primary-color);
     border-radius: 20px;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     pointer-events: none;
     opacity: 0;
-    z-index: 0;
-}
-
-/* Überbrückungsbereich für nahtlosen Übergang */
-.nav-links li::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -0.75rem;
-    right: -0.75rem;
-    bottom: 0;
-    z-index: 0;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 @keyframes bubbleAnimation {
     0% {
-        transform: scale(0.3);
         opacity: 0;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
+        transform: scale(0.7);
     }
     100% {
-        transform: scale(1);
         opacity: 1;
+        transform: scale(1);
     }
 }
 
-/* Farbe des Links ändert sich erst wenn die Bubble da ist */
 .nav-links li a:hover {
     color: white;
     transition-delay: 0.1s;
