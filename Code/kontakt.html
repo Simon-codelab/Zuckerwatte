@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - SweetCloud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Bilder/Bilder_Zuckerwatte/logo.png" alt="SweetCloud Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#ueber-uns">Über uns</a></li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form-section">
+            <div class="contact-form-container">
+                <h1>Kontaktiere uns</h1>
+                <p class="contact-intro">Lass uns gemeinsam dein Event zu etwas Besonderem machen! Fülle das Formular aus, und wir melden uns schnellstmöglich bei dir.</p>
+                
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-type">Art der Veranstaltung *</label>
+                        <select id="event-type" name="event-type" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="hochzeit">Hochzeit</option>
+                            <option value="geburtstag">Geburtstag</option>
+                            <option value="firmen-event">Firmen-Event</option>
+                            <option value="messe">Messe</option>
+                            <option value="sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Gewünschtes Datum *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Anzahl der Gäste</label>
+                        <input type="number" id="guests" name="guests" min="1">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Deine Nachricht *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="checkbox-container">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu *
+                        </label>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button type="submit" class="submit-button">Anfrage absenden</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="Bilder/Bilder_Zuckerwatte/logo.png" alt="SweetCloud Logo">
+                    </div>
+                    <p class="footer-description">
+                        Wir versüßen dein Event mit unserer mobilen Zuckerwattenstation.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>Zuckerwattenweg 1<br>12345 Süßstadt</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone contact-icon"></i>
+                            <a href="tel:+491234567890">+49 123 456 7890</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <a href="mailto:info@sweetcloud.de">info@sweetcloud.de</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html#ueber-uns">Über uns</a></li>
+                        <li><a href="index.html#leistungen">Leistungen</a></li>
+                        <li><a href="index.html#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">AGB</a>
+                </div>
+                <p class="copyright">&copy; 2024 SweetCloud. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
