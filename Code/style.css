@@ -524,6 +524,17 @@ body {
     font-size: 1.1rem;
 }
 
+@media (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefit-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+}
+
 /* ==========================================================================
    Services Section
    Karussell mit drei Hauptdienstleistungen und Navigation
@@ -794,6 +805,17 @@ body {
 @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .advantage-item:last-child {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
