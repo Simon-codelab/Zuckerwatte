@@ -311,6 +311,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.8s ease 1.1s forwards;
+    margin: 0 auto;
 }
 
 .custom-button:hover {
@@ -385,9 +386,23 @@ body {
 
 .custom-faces-description {
     flex: 1;
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideLeft 1s ease 0.5s forwards;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-faces-description h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-faces-description p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 @keyframes slideLeft {
@@ -847,6 +862,7 @@ body {
     color: white;
     max-width: 800px;
     margin: 0 auto;
+    padding: 2rem;
     position: relative;
     z-index: 2;  /* Erhöhe den z-index */
 }
@@ -865,12 +881,9 @@ body {
 }
 
 .cta-buttons {
-    position: relative;
-    z-index: 3;  /* Stelle sicher, dass die Buttons ganz oben liegen */
     display: flex;
-    gap: 1.5rem;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .primary-cta-button, .secondary-cta-button {
@@ -888,19 +901,22 @@ body {
 
 .primary-cta-button {
     display: inline-block;
-    padding: 1.2em 2.4em;
-    font-size: 1.1em;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: white;
     background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
     border: none;
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(115, 211, 223, 0.4);
     position: relative;
     overflow: hidden;
+    min-width: 200px;
+    max-width: 250px;
+    margin: 0 auto;
 }
 
 .primary-cta-button:before {
@@ -1021,8 +1037,8 @@ body {
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(115, 211, 223, 0.97);
-        backdrop-filter: blur(5px);
+        background-color: rgba(115, 211, 223, 0.85);
+        backdrop-filter: blur(8px);
         padding-top: 80px;
     }
 
@@ -1041,7 +1057,7 @@ body {
     .nav-links li a {
         font-size: 1.4rem;
         color: white;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
         transition: color 0.3s ease;
     }
 
@@ -1739,8 +1755,8 @@ body {
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(115, 211, 223, 0.97);
-        backdrop-filter: blur(5px);
+        background-color: rgba(115, 211, 223, 0.85);
+        backdrop-filter: blur(8px);
         padding-top: 80px;
     }
 
@@ -1759,7 +1775,7 @@ body {
     .nav-links li a {
         font-size: 1.4rem;
         color: white;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
         transition: color 0.3s ease;
     }
 
