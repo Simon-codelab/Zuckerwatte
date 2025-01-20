@@ -1796,3 +1796,86 @@ body {
         transform: rotate(-45deg) translate(7px, -6px);
     }
 }
+
+/* Basis-Reset für Mobile */
+@media (max-width: 375px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-section {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        overflow: hidden;
+        background-color: var(--hero-background);
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-title {
+        width: 100%;
+        max-width: 100%;
+        font-size: 2.5rem;
+        word-wrap: break-word;
+        margin: 0 0 1rem 0;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+        margin: 0 0 1.5rem 0;
+    }
+
+    main {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-image {
+        display: none;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .hero-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+        width: 100%;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        margin: 1rem 0;
+        padding: 0 0.5rem;
+    }
+}
