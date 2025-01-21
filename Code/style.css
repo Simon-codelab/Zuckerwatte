@@ -741,6 +741,15 @@ body {
     font-size: 2.5rem;
 }
 
+@media (max-width: 425px) {
+    .advantages-section h2 {
+        font-size: 2.1rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+}
+
 .advantages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
