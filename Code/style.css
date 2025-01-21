@@ -1126,6 +1126,46 @@ body {
     }
 }
 
+@media (max-width: 425px) {
+    .hero-section {
+        padding: 4rem 1rem 2rem;
+        min-height: 80vh;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8em 1.6em;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero-image img {
+        max-width: 60%;
+        transform: scale(2) rotate(-15deg);
+    }
+}
+
 /* ==========================================================================
    Testimonials Section
    Zeigt Kundenbewertungen in einem Karussell
