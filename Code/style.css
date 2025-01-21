@@ -550,6 +550,53 @@ body {
     }
 }
 
+@media (max-width: 425px) {
+    .benefits-section {
+        padding: 3rem 1rem;
+    }
+
+    .benefits-container {
+        width: 100%;
+    }
+
+    .benefits-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    .benefit-card {
+        width: 100%;
+        margin: 0;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.3rem;
+        margin: 0.8rem 0;
+    }
+
+    .benefit-card p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .benefit-icon i {
+        font-size: 1.8rem;
+    }
+}
+
 /* ==========================================================================
    Services Section
    Karussell mit drei Hauptdienstleistungen und Navigation
